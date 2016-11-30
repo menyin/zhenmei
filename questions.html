@@ -116,16 +116,16 @@
     </div>
     <div class="side">
         <div class="titlebar">
-            <span class="icon-user"></span>新闻分类
+            <span class="icon-user"></span>问题分类
         </div>
         <div>
-            <ul id="news_tree" class="ztree"></ul>
+            <ul id="questions_tree" class="ztree"></ul>
         </div>
     </div>
 
     <div class="main">
         <div class="titlebar">
-            <span class="icon-list-ul"></span>新闻中心
+            <span class="icon-list-ul"></span>问题列表
         </div>
         <ul class="news_list">
             <li><a class="left" href="#"><span class="icon-align-left">&nbsp;&nbsp;</span>臻美彩印全新官网上线了！</a> <span class="right">2016-11-29</span>
@@ -193,7 +193,7 @@
 //            swiper3.slideNext();
         }, 1500);
 
-        //新闻分类树
+        //问题分类树
         var zTreeObj;
         // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
         var setting = {
@@ -203,18 +203,17 @@
         };
         // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
         var zNodes = [
-            {name:"公司新闻", open:true, children:[
-                {name:"湖里分公司新闻"}, {name:"思明分公司新闻"}]},
-            {name:"行业资讯", open:true, children:[
-                {name:"设备资讯"}, {name:"原材料新闻"}]},
-            {name:"技术资讯", open:true, children:[
-                {name:"印刷常识"}, {name:"预定指南"}]},
-            {name:"客户反馈"},
-            {name:"其它资讯"}
+            {name:"设备问题", open:true, children:[
+                {name:"A类设备"}, {name:"B类设备"}]},
+            {name:"印刷问题", open:true, children:[
+                {name:"大号包装盒"}, {name:"中号包装盒"}, {name:"小号包装盒"}]},
+            {name:"车间问题", open:true, children:[
+                {name:"A车间"}, {name:"B车间"}]},
+            {name:"经营资质"}
         ];
 //        showIcon : true,
         $(document).ready(function(){
-            zTreeObj = $.fn.zTree.init($("#news_tree"), setting, zNodes);
+            zTreeObj = $.fn.zTree.init($("#questions_tree"), setting, zNodes);
         });
     });
 </script>

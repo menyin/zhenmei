@@ -144,28 +144,6 @@
             </p>
         </div>
         <br/>
-
-        <div class="titlebar">
-            <span class="icon-bookmark"></span>产品展示
-        </div>
-        <!--<ul class="product_imgs1">-->
-        <!--<li class="active"><img src="images/imgs/product_imgs11.jpg" alt=""/></li>-->
-        <!--<li><img src="images/imgs/product_imgs11.jpg" alt=""/></li>-->
-        <!--<li><img src="images/imgs/product_imgs12.jpg" alt=""/></li>-->
-        <!--<li><img src="images/imgs/product_imgs13.jpg" alt=""/></li>-->
-        <!--<li><img src="images/imgs/product_imgs14.jpg" alt=""/></li>-->
-        <!--<p class="bts"><span class="active"></span><span></span><span></span><span></span><span></span></p>-->
-        <!--</ul>-->
-        <div class="product_imgs1 swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/imgs/chanpin1.jpg" alt="img" style="width: 100%;" /></div>
-                <div class="swiper-slide"><img src="images/imgs/chanpin2.jpg" alt="img" style="width: 100%;" /></div>
-                <div class="swiper-slide"><img src="images/imgs/chanpin3.jpg" alt="img" style="width: 100%;" /></div>
-                <div class="swiper-slide"><img src="images/imgs/chanpin4.jpg" alt="img" style="width: 100%;" /></div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
         <div class="titlebar">
             <span class="icon-phone-sign"></span>联系我们
         </div>
@@ -218,78 +196,4 @@
 </html>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
-<script type="text/javascript">
-
-    $(function () {
-
-        //导航菜单处理
-        $('.nav_ul>li').hover(function () {
-            $(this).find('.nav_tip').animate({opacity: 1});
-        }, function () {
-            $(this).find('.nav_tip').animate({opacity: 0});
-        });
-        $('.nav_tip').hover(function () {
-            $(this).animate({opacity: 1});
-        }, function () {
-            $(this).animate({opacity: 0});
-        });
-        //产品展示轮播product_imgs1
-//        (function(){
-//            var iNow=0;
-//            var iIndex=1;
-//            var lis = $('.product_imgs1 li');
-//            var timer=setInterval(function () {
-//                lis.eq(iNow).animate({opacity: 0}, 500, 'linear');
-//                iNow++;
-//                if(iNow>lis.length-1) {
-//                    iNow=0;
-//                }
-//                lis.eq(iNow).animate({opacity: 1}, 500, 'linear');
-//            }, 3000);
-//        })();
-
-        //产品展示
-        var swiper1 = new Swiper('.product_imgs1', {
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            autoplay:3000,
-            loop : true,
-            effect:'fade'
-        });
-        $('.product_imgs1').hover(function () {
-            swiper1.stopAutoplay();
-        }, function () {
-            swiper1.startAutoplay();
-        });
-        //精品案例
-        var swiper2 = new Swiper('.product_imgs2', {
-            paginationClickable: true,
-            freeModeMomentum:true,//不是每格滑动，而是自由滑动
-            slidesPerView: 3,
-            autoplay:0.0001,
-            spaceBetween: 40,
-            loop : true,//循环
-            speed:4000
-        });
-        $('.product_imgs2').hover(function () {
-            swiper2.stopAutoplay();
-        }, function () {
-            swiper2.startAutoplay();
-        });
-
-        //banner轮播
-        var swiper3 = new Swiper('.banner .swiper-container', {
-            pagination: '.banner .swiper-pagination',
-            paginationClickable: true,
-            autoplay:3000,
-            loop : true,//循环
-            speed:1000,
-//            effect:'fade'
-            effect:'cube'
-        });
-        setInterval(function () {
-//            swiper3.slideNext();
-        },1500);
-
-    });
-</script>
+<script type="text/javascript" src="js/public.js"></script>

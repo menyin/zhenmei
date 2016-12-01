@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/font-awesome-ie7.css"/>
     <link rel="stylesheet" href="css/swiper.min.css"/>
     <link rel="stylesheet" href="css/public.css"/>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=yMryVCMO3tp4dRF85mImcKOu"></script>
 
 </head>
 <body>
@@ -98,9 +99,15 @@
     <div class="banner" style="width: 908px;height: 320px;margin:0 auto;text-align: center;">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/imgs/banner1.jpg" alt="img" style="width: 100%;" /><h2>致力印刷 引领行业</h2></div>
-                <div class="swiper-slide"><img src="images/imgs/banner2.jpg" alt="img" style="width: 100%;" /><h2>设备先进 质量保证</h2></div>
-                <div class="swiper-slide"><img src="images/imgs/banner3.jpg" alt="img" style="width: 100%;" /><h2>规模庞大 业务广泛</h2></div>
+                <div class="swiper-slide"><img src="images/imgs/banner1.jpg" alt="img" style="width: 100%;"/>
+
+                    <h2>致力印刷 引领行业</h2></div>
+                <div class="swiper-slide"><img src="images/imgs/banner2.jpg" alt="img" style="width: 100%;"/>
+
+                    <h2>设备先进 质量保证</h2></div>
+                <div class="swiper-slide"><img src="images/imgs/banner3.jpg" alt="img" style="width: 100%;"/>
+
+                    <h2>规模庞大 业务广泛</h2></div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -108,42 +115,6 @@
         <img class="banner_bg" src="images/banner_bg.png" alt=""/>
     </div>
     <div class="side">
-        <div class="titlebar">
-            <span class="icon-user"></span>在线客服
-        </div>
-
-
-        <div class="contact">
-            <p><br/>QQ：11111111111&nbsp;<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=845257580&amp;site=qq&amp;menu=yes"
-                                           target="_blank"><img src="http://wpa.qq.com/pa?p=2:845257580:41"
-                                                                alt="点击这里给我发消息"
-                                                                title="点击这里给我发消息" border="0"></a>
-            </p>
-
-            <p><br/>QQ：11111111111&nbsp;<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=845257580&amp;site=qq&amp;menu=yes"
-                                           target="_blank"><img src="http://wpa.qq.com/pa?p=2:845257580:41"
-                                                                alt="点击这里给我发消息"
-                                                                title="点击这里给我发消息" border="0"></a>
-            </p>
-
-            <p><br>QQ：11111111111&nbsp;<a
-                    href="http://wpa.qq.com/msgrd?v=3&amp;uin=41046035&amp;site=qq&amp;menu=yes"><img
-                    src="http://wpa.qq.com/pa?p=2:41046035:41" alt="点击这里给我发消息" title="点击这里给我发消息" border="0"></a>
-            </p>
-
-            <p><br>QQ：11111111111&nbsp;<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1527346898&amp;site=qq&amp;menu=yes"
-                                          target="_blank"><img src="http://wpa.qq.com/pa?p=2:1527346898:41"
-                                                               alt="点击这里给我发消息"
-                                                               title="点击这里给我发消息" border="0"></a>
-            </p>
-
-            <p><a href="#" target="_blank"><br><img
-                    src="images/emaillink.png"
-                    alt=""
-                    title="在线留言"></a>
-            </p>
-        </div>
-        <br/>
         <div class="titlebar">
             <span class="icon-phone-sign"></span>联系我们
         </div>
@@ -164,51 +135,28 @@
 
     <div class="main">
         <div class="titlebar">
-            <span class="icon-leaf"></span>留言本
+            <span class="icon-leaf"></span>地图向导
         </div>
-        
-        <form class="feedback" action="">
-            <p>如有任何问题，欢迎您给我们留言。您的需求就是我们的追求！</p>
-            <dl class="clear">
-                <dt>标题：</dt>
-                <dd><input type="text"/><span class="txt_tip show">*</span></dd>
-            </dl>
-            <dl class="clear">
-                <dt>姓名：</dt>
-                <dd><input type="text"/><span class="txt_tip">*</span></dd>
-            </dl>
-            <dl class="clear">
-                <dt>电话：</dt>
-                <dd><input type="text"/><span class="txt_tip">*</span></dd>
-            </dl>
-            <dl class="clear">
-            <dt>邮箱：</dt>
-            <dd><input type="text"/><span class="txt_tip">*</span></dd>
-            </dl>
-            <dl class="clear">
-                <dt>留言内容：</dt>
-                <dd><textarea name="msg" id="" cols="40" rows="8"></textarea><span class="txt_tip">*</span></dd>
-            </dl>
-            <dl class="clear verify_code">
-            <dt>验证码：</dt>
-            <dd><input type="text"/><a href=""><img src="images/verify_code.ashx.png" alt=""/><span>换一张</span></a>
-            </dd>
-        </dl>
-            <dl>
-                <dt>&nbsp;</dt>
-                <dd><input type="button" value="提交" class="gradient search_bt"/></dd>
-            </dl>
-        </form>
+        <div>
+            <div id="allmap" style="width: 100%;height:300px;overflow: hidden;margin:0;"></div>
+            <div id="panorama" style="width:100%; height: 300px;"></div>
+        </div>
     </div>
 </div>
 <div class="footer">
     <p>
         <a target="_self" href="/shouye-21615.html">首页</a> | <a target="_self" href="/guanyuwomen-21616.html">关于我们</a> |
         <a target="_self" href="/chanpinzhongxin-21617.html">样品展示</a> | <a target="_self" href="/yewufanwei-30373.html">业务范围</a>
-        | <a target="_self" href="/xinwenzhongxin-51629.html">新闻中心</a> | <a target="_self" href="/faqzhongxin-21618.html">疑难问题</a> | <a
-            target="_self" href="/liuyanben-21619.html">留言本</a> | <a target="_self" href="/lianxiwomen-21620.html">联系我们</a>
+        | <a target="_self" href="/xinwenzhongxin-51629.html">新闻中心</a> | <a target="_self"
+                                                                            href="/faqzhongxin-21618.html">疑难问题</a> | <a
+            target="_self" href="/liuyanben-21619.html">留言本</a> | <a target="_self"
+                                                                     href="/lianxiwomen-21620.html">联系我们</a>
     </p>
-    <p>电话：0592-6655123 手机：<strong>13400000000 周先生</strong>&nbsp;Email：<a href="mailto:41041234@qq.com">41046035@qq.com</a> <span style="display: inline !important">地址：厦门同安区集中工业区同安园68号</span></p>
+
+    <p>电话：0592-6655123 手机：<strong>13400000000 周先生</strong>&nbsp;Email：<a
+            href="mailto:41041234@qq.com">41046035@qq.com</a> <span style="display: inline !important">地址：厦门同安区集中工业区同安园68号</span>
+    </p>
+
     <div class="footer_records">
         备案号：<a target="_blank" href="http://www.miibeian.gov.cn">闽ICP备1234567</a></div>
 </div>
@@ -217,3 +165,19 @@
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">
+    //百度地图API功能
+    var map = new BMap.Map("allmap");
+        var point = new BMap.Point(118.143093, 24.696677, 16);
+        map.centerAndZoom(point, 12);
+        map.enableScrollWheelZoom();   // 添加滚动轴
+        var marker = new BMap.Marker(point);  // 创建标注
+        map.addOverlay(marker);              // 将标注添加到地图中
+        var label = new BMap.Label("<p style='color:red;height: 20px;line-height: 20px;font-weight: bold;'><img src='images/imgs/logo.png' style='width:20px;' alt=''/>厦门臻美彩印有限公司</p>地址：厦门市同安园68号", {offset: new BMap.Size(20, -10)});
+        marker.setLabel(label);
+    //添加全景视图
+    var panorama = new BMap.Panorama('panorama'); //默认为显示导航控件
+    panorama.setPosition(new BMap.Point(118.143093, 24.696677));
+
+
+</script>
